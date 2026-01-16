@@ -24,16 +24,16 @@
     </style>
 
     <script>
-        function submit(){
+        function confSubmit(){
             return confirm("Are you sure you want to submit?");
         }
-        function reset(){
-            retrun confirm("Are you sure you want to submit?");
+        function confReset(){
+            return confirm("Are you sure you want to submit?");
         }
     </script>
 
     <body>
-        <form method="post" action="submit" onsubmit="return submit()" onreset="retrun reset()">
+        <form method="post" action="submit" onsubmit="return confSubmit()" onreset="return confReset()">
             <label for="student ID">Student ID: </label>
             <input type="number" id="student ID" placeholder="Student ID"> <br>
             
