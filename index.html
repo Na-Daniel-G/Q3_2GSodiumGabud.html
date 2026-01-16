@@ -4,6 +4,7 @@
         <meta charset="UTF-8"> 
         <title>Q3 2nd Graded Excersise - Design an HTML form</title>
     </head>
+
     <style>
         body{
             background-color: blanchedalmond;
@@ -21,8 +22,18 @@
             background-color:burlywood;
         }
     </style>
+
+    <script>
+        function submit(){
+            return confirm("Are you sure you want to submit?");
+        }
+        function reset(){
+            retrun confirm("Are you sure you want to submit?");
+        }
+    </script>
+
     <body>
-        <form method="post" action="submit">
+        <form method="post" action="submit" onsubmit="return submit()" onreset="retrun reset()">
             <label for="student ID">Student ID: </label>
             <input type="number" id="student ID" placeholder="Student ID"> <br>
             
