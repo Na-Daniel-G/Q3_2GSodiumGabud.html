@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8"> 
         <title>Q3 2nd Graded Excersise - Design an HTML form</title>
     </head>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+        .container{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            border: 1px black;
+        }
+        form{
+            margin: auto;
+            width: 80%;
+            padding: 20px;
+            background-color:burlywood;
+        }
+    </style>
     <body>
-        <form>
+        <form method="post" action="submit">
             <label for="student ID">Student ID: </label>
             <input type="number" id="student ID" placeholder="Student ID"> <br>
             
@@ -30,7 +48,7 @@
                 <option>grade 12</option>
             </select> <br>
 
-            <p>inter/extern</p>
+            <p>inter/extern:</p>
             <label for="intern">Intern</label>
             <input type="radio" id="intern" name="int"><br>
 
@@ -51,9 +69,11 @@
             <label for="reason">Reason:</label><br>
             <textarea id="reason" placeholder="type here"></textarea><br>
 
-            <label for="submit and reset">Submit and reset</label>
-            <button type="button">Submit</button>
-            <button type="button">Reset</button> 
+            <div class="button">
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </div>
+            
 
         </form>
     </body>
