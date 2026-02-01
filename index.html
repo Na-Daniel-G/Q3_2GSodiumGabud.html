@@ -1,86 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"> 
-        <title>Q3 2nd Graded Excersise - Design an HTML form</title>\
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8"> 
+    <title>Q3 2nd Graded Exercise - Design an HTML form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
+<script>
+    function confSubmit(){
+        return confirm("Are you sure you want to submit?");
+    }
+    function confReset(){
+        return confirm("Are you sure you want to reset?");
+    }
 
-    <script>
-        function confSubmit(){
-            return confirm("Are you sure you want to submit?");
+    function checkEmp(element){
+        if(element.value.trim() === ""){
+            element.style.border = "2px solid blue";
+            element.style.backgroundColor = "#add8e6";
+        } else {
+            element.style.border = "";
+            element.style.backgroundColor = "";
         }
-        function confReset(){
-            return confirm("Are you sure you want to submit?");
-        }
+    }
+</script>
 
-        function checkEmp(element){
-            if(element.value.trim() === ""){
-                element.style.border = "2px soli blue";
-                element.style.backgroundColor="add8e6";
-            }
-            else{
-                element.style.border="";
-                element.style.backgrouonddColor="";
-            }
-        }
-    </script>
+<body>
+    <form id="signupForm" method="post" onsubmit="return confSubmit()" onreset="return confReset()">
+        <label for="studentID">Student ID: </label>
+        <input type="number" id="studentID" placeholder="Student ID" required onblur="checkEmp(this)"> <br>
 
-    <body>
-        <form method="post" action="submit" onsubmit="return confSubmit()" onreset="return confReset()">
-            <label for="student ID">Student ID: </label>
-            <input type="number" id="student ID" placeholder="Student ID" require onblur="ceckEmp(this)"> <br>
-            
-            <label for="Full Name">Name: </label>
-            <input type="text" id="Full Name" placeholder="LAST NAME, FirstName"require onblur="ceckEmp(this)"> <br>
+        <label for="fullName">Name: </label>
+        <input type="text" id="fullName" placeholder="LAST NAME, FirstName" required onblur="checkEmp(this)"> <br>
 
-            <label for="birthday">Birthday: </label>
-            <input type="date" id="birthday" placeholder = "date"require onblur="ceckEmp(this)"> <br>
+        <label for="birthday">Birthday: </label>
+        <input type="date" id="birthday" placeholder="date" required onblur="checkEmp(this)"> <br>
 
-            <label for="email">Email: </label>
-            <input type="email" id="email" placeholder = "me@example.com"require onblur="ceckEmp(this)"> <br>
+        <label for="email">Email: </label>
+        <input type="email" id="email" placeholder="me@example.com" required onblur="checkEmp(this)"> <br>
 
-            <label for="phone">Mobile Phone: </label>
-            <input type="text" id="phone" placeholder = "mobile phone"require onblur="ceckEmp(this)"> <br>
-            
-            <label for="grade level">Grade Level</label>
-            <select id="grade level">
-                <option>grade 7</option>
-                <option>grade 8</option>
-                <option>grade 9</option>
-                <option>grade 10</option>
-                <option>grade 11</option>
-                <option>grade 12</option>
-            </select> <br>
+        <label for="phone">Mobile Phone: </label>
+        <input type="text" id="phone" placeholder="mobile phone" required onblur="checkEmp(this)"> <br>
 
-            <p>inter/extern:</p>
-            <label for="intern">Intern</label>
-            <input type="radio" id="intern" name="int"><br>
+        <label for="gradeLevel">Grade Level</label>
+        <select id="gradeLevel">
+            <option>grade 7</option>
+            <option>grade 8</option>
+            <option>grade 9</option>
+            <option>grade 10</option>
+            <option>grade 11</option>
+            <option>grade 12</option>
+        </select> <br>
 
-            <label for="Extern">Extern</label>
-            <input type="radio" id="Extern" name="int"><br>
+        <p>Intern/Extern:</p>
+        <label for="intern">Intern</label>
+        <input type="radio" id="intern" name="int"><br>
 
+        <label for="extern">Extern</label>
+        <input type="radio" id="extern" name="int"><br>
 
-                <label for="club">Preferred Club</label>
-                <select id="club">
-                    <option>Pallastro</option>
-                    <option>Volant</option>
-                    <option>Acts</option>
-                    <option>Alianti</option>
-                    <option>Labuyo</option>
-                    <option>Himig agham</option>
-                </select><br>
+        <label for="club">Preferred Club</label>
+        <select id="club">
+            <option>Pallastro</option>
+            <option>Volant</option>
+            <option>Acts</option>
+            <option>Alianti</option>
+            <option>Labuyo</option>
+            <option>Himig agham</option>
+        </select><br>
 
-            <label for="reason">Reason:</label><br>
-            <textarea id="reason" placeholder="type here"></textarea require onblur="ceckEmp(this)"><br>
+        <label for="reason">Reason:</label><br>
+        <textarea id="reason" placeholder="type here" required onblur="checkEmp(this)"></textarea><br>
 
-            <div class="button">
-                <input type="submit" value="submit">
-                <input type="reset" value="reset">
-            </div>
-            
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <button type="button" id="viewSignupsBtn">View Signups</button>
+    </form>
 
-        </form>
-    </body>
+    <script src="signup.js"></script>
+</body>
 </html>
