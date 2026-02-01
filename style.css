@@ -1,55 +1,133 @@
-        body{
-            background-color: blanchedalmond;
-            font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
-        }
-        .container{
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            border: 1px black;
-        }
-        form{
-            margin: 30px auto;
-            width: 70%;
-            padding: 20px;
-            background-color:burlywood;
-            border-radius: 8px;
-        }
+/* ---------- Body & General Styles ---------- */
+body {
+    background-color: blanchedalmond;
+    font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
+    color: #333;
+    margin: 20px;
+}
 
-        label {
-        display: block;
-        margin-bottom: 10px;
-        font-weight: bold;
-        }
+/* ---------- Container (optional wrapper) ---------- */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
 
-        input, select, textarea {
-            width: 100%;
-            padding: 6px;
-            margin-top: 4px;
-            box-sizing: border-box;
-            border: 1px solid #555;
-            border-radius: 4px;
-        }
+/* ---------- Form Styles ---------- */
+form {
+    margin: 30px auto;
+    width: 70%;
+    padding: 20px;
+    background-color: burlywood;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
 
-        /* Focus effect (required by instructions) */
-        input:focus, select:focus, textarea:focus {
-            border: 2px solid #000;
-            background-color: #fff8dc;
-            outline: none;
-        }
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
 
-        textarea {
-            resize: vertical;
-        }
+input, select, textarea {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    border-radius: 4px;
+}
 
-        input[type="radio"] {
-            width: auto;
-            margin-right: 5px;
-        }
+/* Focus effect (required by instructions) */
+input:focus, select:focus, textarea:focus {
+    border: 2px solid #000;
+    background-color: #fff8dc;
+    outline: none;
+}
 
-        input[type="submit"], input[type="reset"] {
-            width: auto;
-            padding: 8px 15px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
+textarea {
+    resize: vertical;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+input[type="submit"], input[type="reset"], button {
+    width: auto;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #8B4513; /* dark burlywood for buttons */
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover, button:hover {
+    background-color: #5c2d00;
+}
+
+/* ---------- Table Styles for viewSignUps.html ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff8dc;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #8B4513; /* dark burlywood */
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2e4c2; /* light burlywood tint */
+}
+
+table tr:hover {
+    background-color: #e0d1a8;
+}
+
+/* ---------- No Data Message ---------- */
+.no-data {
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+    color: #555;
+}
+
+/* ---------- Dropdown & Total Count ---------- */
+#clubFilter {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    margin-top: 10px;
+}
+
+#totalCount {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ---------- Links ---------- */
+a {
+    text-decoration: none;
+    color: #8B4513;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
